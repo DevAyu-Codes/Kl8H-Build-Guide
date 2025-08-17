@@ -36,7 +36,7 @@ sudo cp system_mount/system/product/overlay/Settings__romname_gsi__auto_generate
 
 ### Replace it back after modification:
 ```bash
-sudo cp Settings__evox_gsi__auto_generated_rro_product.apk system_mount/system/product/overlay/Settings__evox_gsi__auto_generated_rro_product.apk
+sudo cp Settings__romname_gsi__auto_generated_rro_product.apk system_mount/system/product/overlay/Settings__romname_gsi__auto_generated_rro_product.apk
 ```
 
 ## ⏏️ Unmounting the System Image
