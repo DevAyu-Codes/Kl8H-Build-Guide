@@ -11,6 +11,8 @@ This README walks you through building the **Android GKI kernel** from AOSP’s 
 # 1) Packages
 ```bash
 sudo apt-get update
+sudo apt-get install -y git
+sudo apt-get install -y git-lfs
 sudo apt-get install -y \
   micro repo git-core git curl gcc g++ build-essential bc \
   libssl-dev libncurses5-dev cpio bison flex \
