@@ -36,14 +36,30 @@ repo sync -c -j"$(nproc)"
 #    (This sets EXTRAVERSION = -DevAyu in common/Makefile)
 ```bash
 sed -i 's/^EXTRAVERSION.*/EXTRAVERSION = -DevAyu/' common/Makefile
+cd ~/android-kernel/common
+git add Makefile
+git commit -m "build: Set custom version string"
 ```
 
-# 5) Build (ARM64 GKI)
+# 5) Removing uneccessary hash
 ```bash
+cd scripts
+micro setlocalversion
+```
+and paste:
+```bash
+#!/bin/bash
+exit 0
+```
+
+# 6) Build (ARM64 GKI)
+```bash
+cd ~/android-kernel
+rm -rf out/
 BUILD_CONFIG=common/build.config.gki.aarch64 build/build.sh
 ```
 
-# 6) Finding boot.img (KL8H supports only LZ4)
+# 7) Finding boot.img (KL8H supports only LZ4)
 ```bash
 cd android-kernel/out/android13-5.15/dist/
 ```
